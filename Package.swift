@@ -9,13 +9,13 @@ let package = Package(
   ],
   targets: [
   	.target(
-  		name: "URITemplate.swift",
+  		name: "URITemplate",
   		dependencies: ["Spectre", "PathKit"],
   		path: "Sources"
   	),
   	.testTarget(
   		name: "URITemplateTests",
-  		dependencies: ["URITemplate.swift"]
+  		dependencies: ["URITemplate"]
   	)
   ]
 )
