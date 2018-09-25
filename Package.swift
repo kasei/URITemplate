@@ -7,18 +7,18 @@ let package = Package(
   	.library(name: "URITemplate", targets: ["URITemplate"])
   ],
   dependencies: [
-    .package(url: "https://github.com/kylef/Spectre", from: "0.9.0"),
-    .package(url: "https://github.com/kylef/PathKit", from: "0.9.0"),
+    .package(url: "https://github.com/kylef/Spectre", from: "0.8.0"),
+    .package(url: "https://github.com/kylef/PathKit", from: "0.8.0"),
   ],
   targets: [
   	.target(
   		name: "URITemplate",
-  		dependencies: ["Spectre", "PathKit"],
+  		dependencies: ["PathKit"],
   		path: "Sources"
   	),
   	.testTarget(
   		name: "URITemplateTests",
-  		dependencies: ["URITemplate"]
+  		dependencies: ["Spectre", "URITemplate"]
   	)
   ]
 )
